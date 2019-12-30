@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:3.10
 
 ## Install S6-Overlay
 RUN apk update && apk upgrade && \
