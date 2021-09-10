@@ -2,7 +2,7 @@ name: build-with-tag
 
 on:
   push:
-    branchs:
+    branches:
       - master
     tags:
       - '*'
