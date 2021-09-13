@@ -10,6 +10,8 @@ case $arch in
     'x86_64' )
     wget -O s6-overlay-installer https://github.com/just-containers/s6-overlay/releases/download/${version}/s6-overlay-amd64-installer
     ;;
+    'aarch64' )
+    wget -O s6-overlay-installer https://github.com/just-containers/s6-overlay/releases/download/${version}/s6-overlay-aarch64-installer
     *)
     echo "Arch Unknow"
     exit 1
