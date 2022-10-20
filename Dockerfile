@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:3.13
 
 ENV S6_OVERLAY_VERSION="3.1.1.2"
 
