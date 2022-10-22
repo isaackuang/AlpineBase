@@ -1,6 +1,6 @@
-FROM alpine:3.13
+FROM alpine:3.16
 
-ENV S6_OVERLAY_VERSION="3.1.1.2"
+ENV S6_OVERLAY_VERSION="3.1.2.1"
 
 ## Install Packages
 RUN apk update && apk upgrade && \
