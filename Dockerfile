@@ -1,6 +1,6 @@
 FROM alpine:3.16
 
-ENV S6_OVERLAY_VERSION="3.1.2.1"
+ENV S6_OVERLAY_VERSION="3.1.6.2"
 
 ## Install Packages
 RUN apk update && apk upgrade && \
@@ -11,6 +11,8 @@ RUN apk update && apk upgrade && \
     tar -C / -Jxpf /tmp/s6-overlay-noarch.tar.xz && \
     wget https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-$(uname -m).tar.xz && \
     tar -C / -Jxpf /tmp/s6-overlay-$(uname -m).tar.xz && \
+    wget https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-symlinks-noarch.tar.xz && \
+    tar -C / -Jxpf /tmp/s6-overlay-symlinks-noarch.tar.xz && \
     rm -rf /tmp/s6-overlay*
 
 ENTRYPOINT ["/init"]
